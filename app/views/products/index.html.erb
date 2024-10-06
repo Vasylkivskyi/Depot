@@ -20,7 +20,7 @@
       <% @products.each do |product| %>
         <tr class="<%= cycle('bg-green-50', 'bg-white')%>">
           <td class="px-2 py-3">
-            <%= image_tag(product.image_url, class: 'w-49') %>
+            <%= image_tag(product.image_url, class: 'w-40') %>
           </td>
           <td>
             <h1 class="text-xl font-bold md-3"><%= product.title %></h1>
@@ -35,7 +35,7 @@
               <li>
                 <%= link_to 'Destroy', product, class: 'hover:underline', data: {
                   turbo_method: :delete,
-                  turbo_confirt: 'Are you sure?'
+                  turbo_confirm: 'Are you sure?'
                 } %>
               </li>
             </ul>
